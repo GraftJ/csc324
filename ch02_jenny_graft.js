@@ -8,7 +8,7 @@ for (let i = 1; i <= 7; i++) {
 }
 
 console.log("\nFizzBuzz");
-console.log("Just Fizz or Buzz.")
+console.log("Just Fizz or Buzz.");
 
 for (n = 1; n <= 100; n++) {
     if (n % 3 == 0) {
@@ -22,7 +22,7 @@ for (n = 1; n <= 100; n++) {
     }
 }
 
-console.log("\nIncluding FizzBuzz as well.")
+console.log("\nIncluding FizzBuzz as well.");
 
 for (n = 1; n <= 100; n++) {
     if (n % 3 == 0 && n % 5 !== 0) {
@@ -39,7 +39,7 @@ for (n = 1; n <= 100; n++) {
     }
 }
 
-console.log("\nUnsure how to get the output to include FizzBuzz as an answer, code not correct right now.\nHowever the book offers this solution:")
+console.log("\nUnsure how to get the output to include FizzBuzz as an answer, code not correct right now.\nHowever the book offers this solution:");
 
 for (let n = 1; n <= 100; n++) {
     let output = "";
@@ -48,9 +48,9 @@ for (let n = 1; n <= 100; n++) {
     console.log(output || n);
   }
 
-  console.log("\n This works because at the end of the loop it will eather print out the output wich can be 'Fizz,' 'Buzz,' or 'FizzBuzz' becasue the output is empty unless either or both 'Fizz' or 'Buzz' is added to the empty string. Otherwise if there is nothing in the output it will print out the number.")
+  console.log("\n This works because at the end of the loop it will eather print out the output wich can be 'Fizz,' 'Buzz,' or 'FizzBuzz' becasue the output is empty unless either or both 'Fizz' or 'Buzz' is added to the empty string. Otherwise if there is nothing in the output it will print out the number.");
 
-  console.log("\n Chessboard")
+  console.log("\n Chessboard");
 
 let size = 8;
 
