@@ -39,7 +39,8 @@ for (n = 1; n <= 100; n++) {
     }
 }
 
-console.log("\nUnsure how to get the output to include FizzBuzz as an answer, code not correct right now.\nHowever the book offers this solution:");
+console.log("\nUnsure how to get the output to include FizzBuzz" +
+" as an answer, code not correct right now.\nHowever the book offers this solution:");
 
 for (let n = 1; n <= 100; n++) {
     let output = "";
@@ -48,7 +49,10 @@ for (let n = 1; n <= 100; n++) {
     console.log(output || n);
   }
 
-  console.log("\n This works because at the end of the loop it will eather print out the output wich can be 'Fizz,' 'Buzz,' or 'FizzBuzz' becasue the output is empty unless either or both 'Fizz' or 'Buzz' is added to the empty string. Otherwise if there is nothing in the output it will print out the number.");
+  console.log("\n This works because at the end of the loop it will eather print" +
+  " out the output wich can be 'Fizz,' 'Buzz,' or 'FizzBuzz' becasue the output is" + 
+  " empty unless either or both 'Fizz' or 'Buzz' is added to the empty string." +
+  " Otherwise if there is nothing in the output it will print out the number.");
 
   console.log("\n Chessboard");
 
