@@ -63,4 +63,3 @@ const lineLengths = [6, 4, 2, 4, 6]
 for (let i = 0; i < lineLengths.length; i++){
     console.log("a".repeat(lineLengths[i]));
 }
-
