@@ -39,7 +39,7 @@ for (n = 1; n <= 100; n++) {
     }
 }
 
-console.log("\nUnsure how to get the output to include FizzBuzz as an answer, code not correct right now. However the book offers this solution:")
+console.log("\nUnsure how to get the output to include FizzBuzz as an answer, code not correct right now.\nHowever the book offers this solution:")
 
 for (let n = 1; n <= 100; n++) {
     let output = "";
