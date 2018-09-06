@@ -37,7 +37,7 @@ console.log("\n")
 
 console.log("'a' repeating string.")
 
-for (i = 4; i >= 1; i--){
+for (i = 4; i >= 1; i--) {
     console.log("a".repeat(i));
 }
 
@@ -56,7 +56,7 @@ console.log("\n")
 
 console.log("Incomplete")
 
-for (i = 6; i >= 2; i = i - 2){
+for (i = 6; i >= 2; i = i - 2) {
     console.log("a".repeat(i));
 }
 
@@ -66,7 +66,7 @@ console.log("Completed")
 
 const lineLengths = [6, 4, 2, 4, 6]
 
-for (let i = 0; i < lineLengths.length; i++){
+for (let i = 0; i < lineLengths.length; i++) {
     console.log("a".repeat(lineLengths[i]));
 }
 
@@ -86,7 +86,7 @@ console.log("\n")
 const car = {
     price: 55000,
     model: "tesla",
-    makeNoise: function(noise) {
+    makeNoise: function (noise) {
         console.log(`The ${this.model} goes ${noise}.`);
     }
 };
@@ -186,7 +186,7 @@ console.log("\n")
 
 function byDate(a, b) {
     const aDate = new Date(a.made),
-    bDate = new Date(b.made);
+        bDate = new Date(b.made);
     if (aDate > bDate) return 1;
     if (aDate < bDate) return -1;
     return 0;
@@ -212,7 +212,7 @@ console.log(myArray2.concat(arr2));
 console.log(myArray2
     .concat(arr2)
     .sort(
-        (a, b) => {return a < b ? 1 : -1;} 
+        (a, b) => { return a < b ? 1 : -1; }
     ));
 
 console.log("\n");
