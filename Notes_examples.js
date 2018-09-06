@@ -70,16 +70,16 @@ for (let i = 0; i < lineLengths.length; i++){
     console.log("a".repeat(lineLengths[i]));
 }
 
-/********************************* 
+/****************************************************** 
  
 Chapter 4
 
-**********************************/
-/*********************************
+*******************************************************/
+/******************************************************
 
 Objects
 
-**********************************/
+******************************************************/
 
 console.log("\n")
 
@@ -108,11 +108,11 @@ x += 3;
 console.log(y);
 console.log(x);
 
-/*********************************
+/****************************************************
 
 Arrays
 
-**********************************/
+*****************************************************/
 
 console.log("\n")
 
@@ -193,3 +193,52 @@ function byDate(a, b) {
 }
 
 console.log(cars.sort(byDate));
+
+console.log("\n");
+
+myArray = [4, 5, 6, 7];
+myArray.push(22);
+console.log(myArray);
+
+let myNumber = myArray.pop();
+console.log(myNumber);
+console.log(myArray);
+console.log(myArray.shift());
+
+myArray2 = [4, 5, 6, 7];
+arr2 = [6, 7, 8, 9];
+console.log(myArray2.concat(arr2));
+
+console.log(myArray2
+    .concat(arr2)
+    .sort(
+        (a, b) => {return a < b ? 1 : -1;} 
+    ));
+
+console.log("\n");
+
+const cars2 = [
+    {
+        price: 55000,
+        model: "lexus",
+        made: "2018-09-04"
+    },
+    {
+        price: 95000,
+        model: "corvette",
+        made: "2020-01-01"
+    },
+    {
+        price: 150000,
+        model: "tesla",
+        made: "2017-10-01"
+    }
+];
+
+let myRandom = cars2.length * Math.random();
+let car1 = cars2[Math.floor(myRandom)];
+
+console.log(car1.model);
+
+console.log(Math.floor(myRandom));
+
