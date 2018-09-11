@@ -25,6 +25,45 @@ function isEven(n) {
 
 console.log(isEven(50));
 console.log(isEven(75));
+console.log(isEven(-1));
+console.log(isEven(-2));
 
-console.log("\nBean Counting")
+console.log("\nBean Counting");
+console.log("Count only 'B's in a string.");
 
+//Hint
+
+// const myString = "BaraBBasButtb"
+// let counter = 0;
+// for (let i = 0; i < myString.length; i++) {
+//     if (myString[i] == "B") {
+//         counter++;
+//     }
+// }
+// console.log(counter);
+
+function countBs(string) {
+    let counter = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] == "B") {
+            counter++;
+        }
+    }
+    return counter;
+}
+
+console.log(countBs("BBC"));
+
+console.log("\n Count any Character given.");
+
+function countChar(string, chr) {
+    let counter = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] == chr) {
+            counter++;
+        }
+    }
+    return counter;
+}
+
+console.log(countChar("kakkerlak", "k"));
