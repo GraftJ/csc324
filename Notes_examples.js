@@ -274,8 +274,14 @@ const fetch = require('node-fetch');
 
 fetch('https://jsonplaceholder.typicode.com/todos/')
     .then(response => response.json())
-    .then(handler1)
+    .then(handler2)
 
     function handler1(json) {
         console.log(json);
+    }
+
+    function handler2(json) {
+        const user5 = json.filter(elem => elem.userId == 5);
+        const titles = user5.map(elem => elem.title);
+        console.log(titles);
     }
