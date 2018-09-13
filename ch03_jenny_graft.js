@@ -54,7 +54,7 @@ function countBs(string) {
 
 console.log(countBs("BBC"));
 
-console.log("\n Count any Character given.");
+console.log("\nCount any Character given.");
 
 function countChar(string, chr) {
     let counter = 0;
@@ -67,3 +67,19 @@ function countChar(string, chr) {
 }
 
 console.log(countChar("kakkerlak", "k"));
+
+console.log("\nFind all given letter caps or lowwer case.")
+
+function countAnyChar(string, chr) {
+    const strLower = string.toLowerCase();
+    const chrLower = chr.toLowerCase();
+    let counter = 0;
+    for (let i = 0; i < strLower.length; i++) {
+        if (strLower[i] == chrLower) {
+            counter++;
+        }
+    }
+    return counter;
+}
+
+console.log(countAnyChar("KakKerlak", "k"));

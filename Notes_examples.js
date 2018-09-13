@@ -242,3 +242,23 @@ console.log(car1.model);
 
 console.log(Math.floor(myRandom));
 
+console.log("\n")
+/****************************************************
+
+Chapter 3
+
+*****************************************************/
+
+function countChr(str, chr, policy) {
+    if (policy == "lower") {
+        chr = chr.toLowerCase();
+    } else if (policy == "upper") {
+        chr = chr.toUpperCase();
+    } else {
+        str = str.toLowerCase();
+        chr = chr.toLowerCase();
+    }
+    console.log(str.split("").filter(x => x == chr).length);
+}
+
+countChr("Battleboo", "B", "upper");
