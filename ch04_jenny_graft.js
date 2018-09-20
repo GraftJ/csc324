@@ -27,7 +27,8 @@ function range(start, end, step = start < end ? 1 : -1) {
   console.log(sum(range(1, 10)));
 
   console.log("\nFor the last couple of problems I ended up having to look up help" +
-  " because I was missing a couple of things in the code, causimg errors to occur.")
+  " because I was missing a couple of things in the code, causimg errors to occur." +
+  " I used: https://eloquentjavascript.net/code")
 
   console.log("\nReversing an Array");
 
