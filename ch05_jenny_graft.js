@@ -1,5 +1,5 @@
 console.log("Jenny Graft");
-console.log("Chapter 4 Homework.\n");
+console.log("Chapter 5 Homework.\n");
 
 console.log("Flattening");
 
