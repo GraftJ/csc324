@@ -42,4 +42,16 @@ console.log(group.has(10));
 console.log(group.has(30));
 group.add(10);
 group.delete(10);
+console.log(group);
 console.log(group.has(10));
+
+// let csc324 = new Group;
+// console.log(csc324);
+// csc324.add("Jenny");
+// console.log(csc324);
+// csc324.add("Ben");
+// console.log(csc324);
+// csc324.add("Homer");
+// console.log(csc324);
+// csc324.add(["homework", "projects"]);
+// console.log(csc324);
