@@ -4,15 +4,15 @@
  * 
  *******************************************************************/
 
- // The array of objects, one object for each artist.
- 
- const artists = [
-   {
-     name: "Ms Scandalous",
-     birthYear: 1985,
-     link: "https://www.youtube.com/watch?v=2FPivlfvxu0"
-   },
-   {
+// The array of objects, one object for each artist.
+
+const artists = [
+  {
+    name: "Ms Scandalous",
+    birthYear: 1985,
+    link: "https://www.youtube.com/watch?v=2FPivlfvxu0"
+  },
+  {
     name: "Juggy D",
     birthYear: 1981,
     link: "https://www.youtube.com/watch?v=1jAc_-FVjdI"
@@ -32,23 +32,28 @@
     birthYear: 1970,
     link: "https://www.youtube.com/watch?v=O95-w2gACuA"
   }
- ]
+]
 
- // complete with code to select and populate the table
+function makeTable(array) {
+  let contents =
+    `
+   <tr>
+      <th>Name</th>
+      <th>Date of Birth</th>
+      <th>Link</th>
+    </tr>
+   `;
+  artists.forEach(function (artist) {
+    contents += "<tr>";
+    contents += `<td>${artist.name}</td>`;
+    contents += `<td>${artist.birthYear}</td>`;
+    contents += `<td><a href="${artist.link}">${artist.link}</a></td>`;
+  });
+  return contents;
+}
 
-// const linkParagraph = document.querySelector("#listLinks");
-// const list = document.createElement("ul");
-// artists.forEach(function(artist) {
-//   const listItem = document.createElement("li");
-//   const anchor = document.createElement("a");
-//   anchor.href = artist.link;
-//   anchor.target = "_blank"
-//   anchor.innerHTML = artist.name;
-//   listItem.appendChild(anchor);
-//   list.appendChild(listItem);
-// });
-
-// linkParagraph.appendChild(list);
+const tab = document.querySelector("#bhangra");
+tab.innerHTML = makeTable(artists);
 
 //sort by name
 function byName(a, b) {
@@ -57,22 +62,33 @@ function byName(a, b) {
   return 0;
 }
 
-//sort
-
-console.log(artists.sort(byName));
-
-//sort random
-
-function pickArtist() {
-  const randomIndex = Math.floor(Math.random() * artists.length);
-  return artists[randomIndex].name;
+function sortName() {
+  const title = document.querySelector("#bhangra");
+  title.innerHTML = byName(artist.name);
 }
 
-//shuffle artists randomly
+const nameButton = document.querySelector("#name-button");
+nameButton.addEventListener("click", sortName);
 
-Array.prototype.shuffle = function() {
+//sort by date
+function byDate(a, b) {
+  if (a.birthYear < b.birthYear) return -1;
+  if (a.birthYear > b.birthYear) return 1;
+  return 0;
+}
+
+function sortDate() {
+  const date = document.querySelector("#bhangra");
+  date.innerHTML = byDate(artist.birthYear);
+}
+
+const dateButton = document.querySelector("#date-button");
+dateButton.addEventListener("click", sortDate);
+
+//shuffle artists randomly
+Array.prototype.shuffle = function () {
   let input = this;
-  for (let i = input.length-1; 1 >= 1; i--) {
+  for (let i = input.length - 1; 1 >= 1; i--) {
     let randomIndex = Math.floor(Math.random() * (i + 1));
     let itemAtIndex = input(randomIndex);
     input[randomIndex] = input[i];
@@ -81,12 +97,10 @@ Array.prototype.shuffle = function() {
   return imput;
 }
 
-// a button showing random artist
+function sortRando() {
+  const rando = document.querySelector("#bhangra");
+  rando.innerHTML = shuffle(artist.name);
+}
 
 const randomButton = document.querySelector("#random-button");
-randomButton.addEventListener("click", showRandomArtist);
-
-function showRandomArtist() {
-  const artist = document.querySelector("#random-artist");
-  artist.innerHTML = pickArtist();
-}
+randomButton.addEventListener("click", sortRando);
