@@ -4,6 +4,8 @@
  * 
  *******************************************************************/
 
+// web https://graft-table-assign.surge.sh
+
 // The array of objects, one object for each artist.
 
 const artists = [
@@ -62,13 +64,14 @@ function byName(a, b) {
   return 0;
 }
 
-function sortName() {
-  const title = document.querySelector("#bhangra");
-  title.innerHTML = byName(artist.name);
+const nameButton = document.querySelector("#name-button");
+
+function sortByName() {
+  const sortedArtists = artists.sort(byName);
+  tab.innerHTML = makeTable(sortedArtists);
 }
 
-const nameButton = document.querySelector("#name-button");
-nameButton.addEventListener("click", sortName);
+nameButton.addEventListener("click", sortByName);
 
 //sort by date
 function byDate(a, b) {
@@ -77,30 +80,32 @@ function byDate(a, b) {
   return 0;
 }
 
-function sortDate() {
-  const date = document.querySelector("#bhangra");
-  date.innerHTML = byDate(artist.birthYear);
+const dateButton = document.querySelector("#date-button");
+
+function sortByDate() {
+  const sortedDates = artists.sort(byDate);
+  tab.innerHTML = makeTable(sortedDates);
 }
 
-const dateButton = document.querySelector("#date-button");
-dateButton.addEventListener("click", sortDate);
+dateButton.addEventListener("click", sortByDate);
 
 //shuffle artists randomly
 Array.prototype.shuffle = function () {
   let input = this;
-  for (let i = input.length - 1; 1 >= 1; i--) {
+  for (let i = input.length - 1; i >= 1; i--) {
     let randomIndex = Math.floor(Math.random() * (i + 1));
-    let itemAtIndex = input(randomIndex);
+    let itemAtIndex = input[randomIndex];
     input[randomIndex] = input[i];
     input[i] = itemAtIndex;
   }
-  return imput;
-}
-
-function sortRando() {
-  const rando = document.querySelector("#bhangra");
-  rando.innerHTML = shuffle(artist.name);
+  return input;
 }
 
 const randomButton = document.querySelector("#random-button");
-randomButton.addEventListener("click", sortRando);
+
+function randomizedList() {
+  const randomizedArtist = artists.shuffle();
+  tab.innerHTML = makeTable(randomizedArtist);
+}
+
+randomButton.addEventListener("click", randomizedList);
